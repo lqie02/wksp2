@@ -109,7 +109,7 @@ function showSlides() {
 
 <div class="container">
   <img src="../img/banner.jpg" alt="Snow" height="250" width="1000">
-  <button class="btn">Start Order</button>
+ <!--  <button class="btn">Start Order</button> -->
 </div>
 
 <?php include('../footer.php');?>
