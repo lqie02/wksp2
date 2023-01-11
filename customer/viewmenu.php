@@ -44,6 +44,7 @@
 
             <button type="button" id="button-cart" onclick="addCart('<?php echo $fetch_product['item_id']; ?>')" class="btn btn-primary" name="add_to_cart">Add to cart</button>
           </div>
+                    <br><br>
        </div>
         <?php } ?>
       <?Php } else {?>
@@ -52,7 +53,6 @@
 
    
    </div>
-   <br>
    </div>
 
 </section>
