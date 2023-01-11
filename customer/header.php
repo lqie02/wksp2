@@ -23,7 +23,7 @@
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="/fkfood/customer/css/styleheader.css" />
     <link rel="stylesheet" href="/fkfood/customer/css/style.css">
-    <link rel="stylesheet" href="/fkfood/customer/css/bootstrap.css">
+<!--     <link rel="stylesheet" href="/fkfood/customer/css/bootstrap.css"> -->
 
     <!-- js files -->
     <script src="../js/jquery-2.1.1.min.js"></script>
