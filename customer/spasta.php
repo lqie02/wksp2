@@ -7,14 +7,14 @@
 
 <section class="products">
 
-   <h1 class="heading">Beverages</h1>
+   <h1 class="heading">Pasta</h1>
    <div class="msg"></div>
    <div class="row">
    <div class="box-container" id="product">
 
       <?php
 
-      $sql = "SELECT * FROM item where category_id = '6005' ";
+      $sql = "SELECT * FROM item where category_id = '6001' ";
 
       $implode = array();
 
