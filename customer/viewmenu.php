@@ -34,7 +34,7 @@
 
         <?php while($fetch_product = mysqli_fetch_assoc($query)) { ?>
          <!--   border for product -->
-          <div class="col-md-3">
+          <div class="col-md-4">
             <form method="post">
           <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:10px; padding:16px;" align="center">
             <img src="/wksp2<?php echo $fetch_product['image']; ?>" alt="">
