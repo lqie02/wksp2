@@ -3,20 +3,22 @@
   
 
   if(isset($_POST['submit'])){
-     $customer_query = $db->query("UPDATE customer SET custName = '" .$db->escape($_POST['custName']) ."', custTel = '" .$db->escape($_POST['custTel']) . "', address = '".$db->escape($_POST['address'])."' WHERE customer_id = '".$_SESSION['customer_id']."'");
+     $customer_query =mysqli_query($conn,"UPDATE customer SET custName = '" .$_POST['custName'] ."', custTel = '" .$_POST['custTel'] . "', address = '".$_POST['address']."' WHERE customer_id = '".$_SESSION['customer_id']."'");
      
   
 
      if($_POST['custPassword']){
-      $customer_query = $db->query("UPDATE customer SET custPassword = '" .$db->escape(md5($_POST['custPassword'])) ."'  WHERE customer_id = '".$_SESSION['customer_id']."'");
+      $customer_query = mysqli_query($conn,"UPDATE customer SET custPassword = '" .md5($_POST['custPassword']) ."'  WHERE customer_id = '".$_SESSION['customer_id']."'");
      }
 
    echo '<script>alert("Update successfully"); location.replace(document.referrer);</script>';
   }
 
-  $customer = $db->query("SELECT * FROM customer WHERE customer_id='".$_SESSION['customer_id']."'");
+  $customer = mysqli_query($conn,"SELECT * FROM customer WHERE customer_id='".$_SESSION['customer_id']."'");
+  $row = mysqli_fetch_assoc($customer);
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
