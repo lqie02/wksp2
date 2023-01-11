@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="img/2.png" type="image/png" sizes="20x20">
+  <link rel="icon" href="../img/2.png" type="image/png" sizes="20x20">
   
     <!-- Bootstrap core CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
