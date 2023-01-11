@@ -52,7 +52,7 @@ if(isset($_POST['btn_login']))
 
         mysqli_query($conn,"DELETE FROM loginlogs WHERE IpAddress = '" . $ip_address . "'");
         //echo "<script>alert('Login Success!');</script>";
-        header("Location: customer/Location.php");
+        header("Location: customer/homepage.php");
         exit;
 
       
