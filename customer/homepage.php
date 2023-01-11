@@ -38,8 +38,7 @@
 .container .btn:hover {
   background-color:  #ffe6b3;
 }
-
-  
+<p style="background-image: url('background.jpeg');">
 </style>
 <div style="background-color:#f5f5f0">
 </head>
