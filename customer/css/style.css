@@ -22,11 +22,11 @@ body {
 }
 
 .logo span {
-  color: var(--color-SaddleBrown);
+  color: var(--color-primary);
 }
 
 .menu-bar {
-  background-color: var(--color-SandyBrown);
+  background-color: var(--color-black);
   height: 80px;
   width: 100%;
   display: flex;
@@ -37,6 +37,10 @@ body {
   position: relative;
 }
 
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
 
 .menu-bar ul li {
   /* width: 120px; */
@@ -47,7 +51,7 @@ body {
 }
 
 .menu-bar ul li a {
-  font-size: 14px;
+  font-size: 20px;
   color: var(--color-white);
   text-decoration: none;
 
@@ -91,13 +95,19 @@ body {
   display: none;
 }
 
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: var(--color-black);
+}
 
 .hero {
   height: calc(100vh - 80px);
   background-image: url(./bg.jpg);
   background-position: center;
 }
-
 h1.heading{
     font-weight: bold;
     text-align: center;
