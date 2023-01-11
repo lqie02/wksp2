@@ -17,12 +17,12 @@ body {
 }
 
 .logo {
-  color: var(--color-black);
+  color: var(--color-white);
   font-size: 30px;
 }
 
 .logo span {
-  color: var(--color-brown);
+  color: var(--color-primary);
 }
 
 .menu-bar {
@@ -37,6 +37,10 @@ body {
   position: relative;
 }
 
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
 
 .menu-bar ul li {
   /* width: 120px; */
@@ -47,8 +51,8 @@ body {
 }
 
 .menu-bar ul li a {
-  font-size: 14px;
-  color: var(--color-black);
+  font-size: 20px;
+  color: var(--color-white);
   text-decoration: none;
 
   transition: all 0.3s;
@@ -91,13 +95,19 @@ body {
   display: none;
 }
 
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: var(--color-black);
+}
 
 .hero {
   height: calc(100vh - 80px);
   background-image: url(./bg.jpg);
   background-position: center;
 }
-
 h1.heading{
     font-weight: bold;
     text-align: center;
