@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Custom styles for this template-->
-    <link rel="stylesheet" href="/fkfood/customer/css/styleheader.css" />
-    <link rel="stylesheet" href="/fkfood/customer/css/style.css">
-    <link rel="stylesheet" href="/fkfood/customer/css/bootstrap.css">
+    <link rel="stylesheet" href="/wksp2/customer/css/styleheader.css" />
+    <link rel="stylesheet" href="/wksp2/customer/css/style.css">
+    <link rel="stylesheet" href="/wksp2/customer/css/bootstrap.css">
 
     <!-- js files -->
     <script src="../js/jquery-2.1.1.min.js"></script>
