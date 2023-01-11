@@ -7,14 +7,14 @@
 
 <section class="products">
 
-   <h1 class="heading">Pasta</h1>
+   <h1 class="heading">Beverages</h1>
    <div class="msg"></div>
    <div class="row">
    <div class="box-container" id="product">
 
       <?php
 
-      $sql = "SELECT * FROM item where category_id = '6001' ";
+      $sql = "SELECT * FROM item where category_id = '6005' ";
 
       $implode = array();
 
@@ -36,11 +36,11 @@
        
 
         <!--   border for product -->
-          <div class="col-md-15">
+          <div class="col-md-4">
             <form method="post">
           <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:10px; padding:16px;" align="center">
 
-            <img src="/wksp2?php echo $fetch_product['image']; ?>" alt="">
+            <img src="/wksp2<?php echo $fetch_product['image']; ?>" alt="">
             <h3><?php echo $fetch_product['itemName']; ?></h3>
             <div class="price">RM<?php echo $fetch_product['unitPrice']; ?></div>
             <input type="hidden" name="item_id" value="<?php echo $fetch_product['item_id'];?>">
