@@ -1,5 +1,5 @@
 <?php ob_start(); $title = "Menu"; include('header.php') ;?>
-<br>
+
 <center><?php include('sidebar.php') ;?></center>
 <body>
 
@@ -36,7 +36,7 @@
        
 
         <!--   border for product -->
-          <div class="col-md-7">
+          <div class="col-md-6">
             <form method="post">
           <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:10px; padding:16px;" align="center">
 
