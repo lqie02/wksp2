@@ -17,7 +17,7 @@ body {
 }
 
 .logo {
-  color: var(--color-white);
+  color: var(--color-black);
   font-size: 30px;
 }
 
@@ -52,7 +52,7 @@ body {
 
 .menu-bar ul li a {
   font-size: 20px;
-  color: var(--color-white);
+  color: var(--color-black);
   text-decoration: none;
 
   transition: all 0.3s;
