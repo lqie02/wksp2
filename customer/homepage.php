@@ -111,7 +111,8 @@ function showSlides() {
  <!--  <button class="btn">Start Order</button> -->
 </div>
 
-<?php include('../footer.php');?>
+	<?php include('../footer.php');?>
 
 </body>
+
 </html>

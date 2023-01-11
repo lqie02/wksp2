@@ -51,19 +51,19 @@
       <div class="form">
         <form action="edit.php" method="post">
         <label>Name</label>
-        <input type="text" style="font-size: 16px" placeholder="Name" name="custName">
+        <input type="text" style="font-size: 16px" placeholder="Name" name="custName" value="<?php echo $row['custName'] ?>">
 
         <label>Email</label>
-        <input type="text" style="font-size: 16px" placeholder="Email" name="custEmail" >
+        <input type="text" style="font-size: 16px" placeholder="Email" name="custEmail" value="<?php echo $row['custEmail'] ?>">
 
         <label>Telephone</label>
-        <input type="text" style="font-size: 16px" placeholder="Telephone" name="custTel">
+        <input type="text" style="font-size: 16px" placeholder="Telephone" name="custTel" value="<?php echo $row['custTel'] ?>">
 
         <label>Address</label>
-        <input type="text" style="font-size: 16px" placeholder="Address" name="address">
+        <input type="text" style="font-size: 16px" placeholder="Address" name="address" value="<?php echo $row['address'] ?>">
         
         <label>Password</label>
-        <input pattern=".{8,}" type="password" placeholder="Password"  name="custPassword" value="" class="form-control" title="8 characters minimum">
+        <input pattern=".{8,}" type="password" placeholder="Password"  name="custPassword" value="" class="form-control"  title="8 characters minimum">
         <br><br>
        <button class="button button3" name="submit">Submit</button>
       </div>
