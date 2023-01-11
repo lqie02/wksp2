@@ -38,7 +38,7 @@
         <!--   border for product -->
           <div class="col-md-15">
             <form method="post">
-          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:10px; padding:16px;" align="center">...
+          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:10px; padding:16px;" align="center">
 
             <img src="/wksp2?php echo $fetch_product['image']; ?>" alt="">
             <h3><?php echo $fetch_product['itemName']; ?></h3>
