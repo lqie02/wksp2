@@ -94,7 +94,6 @@ function showSlides() {
 }
 </script>
 
-mm
 <center>
       <div class="row"> 
         <div class="column">
