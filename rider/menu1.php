@@ -39,15 +39,15 @@ $row = mysqli_fetch_assoc($qry);
     	p
 		{	
 			margin-left: 50px;
-			margin-top: 70px;
+			margin-top: 80px;
 			font-size: 50px;
 		}
 		p.txt
 		{
-			margin-top: 10px;
+			margin-top: 15px;
 			text-align: left;
 			color:#162A69;
-			margin-left: 160px;
+			margin-left: 165px;
 		}
 
 		p.txt1
@@ -59,7 +59,12 @@ $row = mysqli_fetch_assoc($qry);
 		p.txt2
 		{
 			margin-top: 20px;
-
+			font-size: 40px;
+		}
+		
+		p.txt3
+		{
+			margin-top: 50px;
 			font-size: 40px;
 		}
 
