@@ -1,7 +1,7 @@
 <?php ob_start();$title = "Menu"; include('header.php') ;?>
 
 <body>
-	
+<p style="background-image: url('../img/background.jpeg');">
 <div class="container">
    <div class="msg"></div>
   <div class="cart-box">
