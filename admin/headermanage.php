@@ -25,7 +25,7 @@
 		<li><a  class="active" href="admin_manage.php">Manage Staff</a></li>
        <!-- <li><a href="#">Add Product</a></li>-->
 		<li><a href="dailyreport.php">Sales Report</a></li>
-        <li><a href="../logout.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav>
 </body>

@@ -68,7 +68,7 @@ p.txt2
 		<li><a class="active" href="menu.php">Home</a></li>
 		<li><a href="rider_acceptorder.php">Delivered Status</a></li>
         <li><a href="rider_orderhistory.php">Delivered History</a></li>
-        <li><a href="../logout.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav>
 	

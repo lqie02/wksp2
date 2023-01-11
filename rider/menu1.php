@@ -32,8 +32,38 @@ $row = mysqli_fetch_assoc($qry);
 <title>Rider Menu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="menuStyle.css">
-	<link rel="stylesheet" type="text/css" href="menuheader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	
+	<style type="text/css">
+    	
+    	p
+		{	
+			margin-left: 50px;
+			margin-top: 70px;
+			font-size: 50px;
+		}
+		p.txt
+		{
+			margin-top: 10px;
+			text-align: left;
+			color:#162A69;
+			margin-left: 160px;
+		}
+
+		p.txt1
+		{
+			margin-top: 120px;
+			font-size: 40px;
+		}
+
+		p.txt2
+		{
+			margin-top: 20px;
+
+			font-size: 40px;
+		}
+
+    </style>
 </head>
 	
 <body>
@@ -50,7 +80,7 @@ $row = mysqli_fetch_assoc($qry);
 		<li><a class="active" href="menu1.php">Home</a></li>
 		<li><a href="rider_acceptorder.php">Delivered Status</a></li>
         <li><a href="rider_orderhistory.php">Delivered History</a></li>
-        <li><a href="../logout.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav>
 	

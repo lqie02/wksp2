@@ -19,7 +19,7 @@
 		<img src="../img/logo.png" type="image/png" alt="FK Restaurant">
 		<label class="logo" >FK Restaurant</label>
 		<ul>
-		<li><a  href="menu.php">Home</a></li>
+		<li><a  href="menu1.php">Home</a></li>
 		<li><a  href="rider_acceptorder.php">Delivered Status</a></li>
 		<li><a  class="active" href="rider_orderhistory.php">Delivered History</a></li>
         <li><a href="logout.php">Logout</a></li>
