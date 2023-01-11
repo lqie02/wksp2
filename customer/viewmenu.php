@@ -3,7 +3,7 @@
 <body>
 
 <div class="container">
-
+<p style="background-image: url('background.jpeg');">
 <section class="products">
 
    <h1 class="heading">MENU</h1>
