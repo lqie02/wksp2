@@ -1,4 +1,4 @@
-<?php $title= "Item"; include('headerstaff.php');?>
+<?php $title= "Item"; include('headeritem.php');?>
 
 <?php 
 
@@ -9,10 +9,10 @@ if(isset($_GET['delete'])){
 
 
    if($check_delete_row){
-      header('location:/fkfood/manager/item.php');
+      header('location:/wksp2/manager/item.php');
       $message[] = 'product has been deleted';
    }else{
-      header('location:/fkfood/manager/item.php');
+      header('location:/wksp2/manager/item.php');
       $message[] = 'product could not be deleted';
    };
 }
@@ -35,10 +35,10 @@ if(isset($_GET['delete'])){
    if(mysqli_insert_id($conn)>0){
 
       $message[] = 'product add succesfully';
-      header('location:/fkfood/manager/item.php');
+      header('location:/wksp2/manager/item.php');
    }else{
       $message[] = 'could not add the product';
-      header('location:/fkfood/manager/item.php');
+      header('location:/wksp2/manager/item.php');
    }
 
  }
@@ -65,15 +65,15 @@ if(isset($_GET['delete'])){
 
    if($query){
       $message[] = 'product updated succesfully';
-      header('location:/fkfood/manager/item.php');
+      header('location:/wksp2/manager/item.php');
    }else{
       $message[] = 'product could not be updated';
-      header('location:/fkfood/manager/item.php');
+      header('location:/wksp2/manager/item.php');
    }
 
  }
 ?>
-<body class="item">
+<body>
 <div class="container">
 
 <section>
@@ -100,25 +100,26 @@ if(isset($_GET['delete'])){
    <table class="table table-bordered table-hover">
 
       <thead>
+		  <tr style="font-size: 15px">
       	 <th style="width:10px;">No</th>
-         <th>product Image</th>
+		  <th>Product Image</th>
          <th>Product Name</th>
          <th>Product Price</th>
        <!--   <th>Product Status</th>-->
-         <th>Action</th>
+         <th>Action</th></tr>
       </thead>
 
       <tbody>
       	 <?php $items = mysqli_query($conn,"SELECT * FROM item "); ?>
          <?php if (mysqli_num_rows($items) > 0){ ?>
 	        <?php $no = 1; while($item = mysqli_fetch_assoc($items)){?>
-              <tr>
+              <tr style="font-size: 15px">
               	<td ><?php echo $no;?></td>
               	<td ><img src="../<?php echo $item['image']; ?>" style="width: 100px;" alt=""></td>
               	<td><?php echo $item['itemName'];?></td>
               	<td>RM <?php echo $item['unitPrice'];?></td>
               	<td>
-	               <a href="item.php?delete=<?php echo $item['item_id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a>
+	               <a href="item.php?delete=<?php echo $item['item_id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a> &nbsp;&nbsp;
 	               <a href="item.php?edit=<?php echo $item['item_id']; ?>" class="option-btn"> <i class="fas fa-edit"></i> update </a>
 	            </td>
               </tr>
@@ -167,7 +168,7 @@ if(isset($_GET['delete'])){
       </select>
       <input type="file" name="update_p_image" accept="image/png, image/jpg, image/jpeg" style="display:inline;">
 
-      <input type="submit" value="update the prodcut" name="update_product" class="btn">
+      <input type="submit" value="update the product" name="update_product" class="btn">
    </form>
 
    <?php

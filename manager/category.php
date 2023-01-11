@@ -1,4 +1,4 @@
-<?php $title = 'Category';include('headerstaff.php');?>
+<?php $title = 'Category';include('headercategory.php');?>
 
 <?php
 
@@ -8,23 +8,25 @@ if(isset($_GET['dt'])){
    
 }
 ?>
-
-<body class="category">
+<html>
+<body>
 	<div class="container">
      <button style="margin-top:50px; margin-bottom: 10px" class="btn btn-primary" onclick="popup_box('','Add Category');"> ADD NEW </button>
 	 <table  class="table table-bordered table-hover">
-       <thead>
-       	 <td width="15px">No</td>
+       <thead  class="table-dark">
+		   <tr style="font-size: 17px">
+       	 <td width="15px">No.</td>
        	 <td >Name</td>
-       	 <td>description</td>
-       	 <td>Action</td>
+       	 <td>Description</td>
+       	 <td><center>Action</center></td>
+		   </tr>
        </thead>
        <tbody>
          <?php $category = mysqli_query($conn,"SELECT * FROM category "); ?>
 	        <?php  if ($category->num_rows > 0){ 
                 ?>
 	        <?php $no = 1; while($category_row = mysqli_fetch_assoc($category)){?>
-            <tr>
+            <tr  style="font-size: 17px">
             	<td><?php echo $no;?></td>
             	<td><?php echo $category_row['categoryName'];?> </td>
             	<td><?php echo $category_row['description'];?> </td>
@@ -82,7 +84,7 @@ if(isset($_GET['dt'])){
              var sm = document.getElementById('button-save').value;
 
              $.ajax({
-                 url: '/fkfood/manager/category_save.php',
+                 url: '/wksp2/manager/category_save.php',
                  type: 'post',
                  data: { category_id:category_id, categoryName: categoryName, description: description,sm:sm},
                  dataType: 'json',
@@ -127,3 +129,5 @@ if(isset($_GET['dt'])){
 </script>
 
 </body>
+	</html>
+	

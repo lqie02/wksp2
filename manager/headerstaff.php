@@ -17,7 +17,7 @@
 	<link rel="icon" href="../img/2.png" type="image/png" sizes="20x20">
    
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/fkfood/manager/css/staff.css">
+    <link rel="stylesheet" type="text/css" href="css/staff.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="/fkfood/manager/css/bootstrap.css">
 	<title><?php echo $title;?></title>
