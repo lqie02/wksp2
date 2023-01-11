@@ -37,7 +37,6 @@
       <h1 class="logo">FK<span>Restaurant</span></h1>
       <ul>     
        <li><a href="viewmenu.php">Menu<i class="fas fa-drumstick-bite"></i></a></li>
-        <li><a href="category.php">Category <i class="fa fa-list"></i></a></li>
         <li><a href="Location.php">Locate us <i class="fas fa-map-marker-alt"></i></a></li>
         <li><a href="edit.php">Edit Profile <i class="fa fa-user"></i></a></li>
         <li><a href="contact.php">Contact us  <i class="fa fa-phone"></i></a></li>
