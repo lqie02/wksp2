@@ -23,10 +23,10 @@ if(isset($_POST['submit']))
 		$staffName = $_POST['staffName'];
 		$staffEmail = $_POST['staffEmail'];
 		$staffType = $_POST['staffType'];
-		$password = $_POST['password'];
+		$password = $_POST['staffPassword'];
 		$department_id =$_POST['department_id'];
-
-		$password = md5($password);
+		$cpassword =$_POST['cpassword'];
+		
 	
 	if($password != $cpassword)
 	{
@@ -35,6 +35,7 @@ if(isset($_POST['submit']))
 	} 
 	else
 	{
+		$password = md5($password);
 		$query = "INSERT INTO staff(staffName, staffEmail, staffType, staffPassword,admin_id,department_id) VALUES ('$staffName', '$staffEmail', '$staffType', '$password', '$id','$department_id' )";
 
 		$res = mysqli_query($conn,$query);
