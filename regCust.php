@@ -18,19 +18,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 	$password = test_input($_POST['password']);
 	$cpassword =test_input($_POST['cpassword']);
 
-	$query = $db->query("SELECT DISTINCT * FROM customer WHERE LCASE(custEmail) = '" . $db->escape($custEmail) . "'");
+	$query = mysqli_query($conn,"SELECT DISTINCT * FROM customer WHERE LCASE(custEmail) = '" . $custEmail . "'");
 
     if($query->num_rows){
-        echo "<script>alert('email address exit in data base pls login');</script>";
+        echo "<script>alert('email address exist in data base pls login');</script>";
     }elseif($password != $cpassword){
 		echo "<script>alert('Two passwords that enter do not match');</script>";
 		echo"<meta http-equiv='refresh' content='0; url=regCust.php'/>";
 	}else {
 
-        $db->query("INSERT INTO customer SET custName = '" . $db->escape($custName)."', custEmail = '" . $db->escape($custEmail) . "', custTel ='".$db->escape($custTel)."', address = '".$db->escape($address)."', custPassword ='".$db->escape(md5($password))."'");
+        mysqli_query($conn,"INSERT INTO customer SET custName = '" . $custName."', custEmail = '" . $custEmail . "', custTel ='".$custTel."', address = '".$address."', custPassword ='".md5($password)."'");
 		// echo($conn->query($query));
 		// exit();
-		if($db->getLastId()){
+		if(mysqli_insert_id($conn)){
 			echo "<script>alert('Sucessfully register! Please proceed to login.');</script>";
 			echo"<meta http-equiv='refresh' content='0; url=index.php'/>";
 		}else{
