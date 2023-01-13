@@ -105,7 +105,7 @@ $title = "Payment Page"; include('header.php');
   </div>
 
 <div style="text-align:center;">
-  <h2><a href="/fkfood/customer/rating.php?order_id=<?php echo $order_id;?>">Rate us</a></h2>
+  <h2><a href="/wksp2/customer/rating.php?order_id=<?php echo $order_id;?>">Rate us</a></h2>
 </div>
 
 <?php } else { ?>
