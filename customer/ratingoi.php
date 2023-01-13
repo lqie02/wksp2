@@ -38,15 +38,9 @@
 <link href="css/stylerate.css" rel="stylesheet" type="text/css" media="all" />
 <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 </head>
+
 <!-- <body style= "background: url(jpg); background: no - repeat; background - size : center; height: 100%"> -->
-<body>
-    <div class="container">
-    <?php if(isset($_GET['order_id'])){
-            $order_info = mysqli_query($conn,"SELECT * FROM orders WHERE order_id='".$_GET['order_id']."'");
-          }
-     
-        if(isset($order_info) && $order_info->num_rows > 0 ){ 
-      ?>
+
     <h1 class="agile_head text-center">Rate Us</h1>
     <div class="w3layouts_main wrap">
 	  <h3>Please help us to serve you better by taking a couple of minutes. </h3>
@@ -73,18 +67,13 @@
 			<h2>If you have specific feedback, please write to us...</h2>
 			<textarea placeholder="Additional comments" class="w3l_summary" name="comments" required=""></textarea>
 			<input type="text" placeholder="Your Name (optional)" name="name"  />
-			  <div class="col-sm-10">
-                <input type="hidden" name="order_id" value="<?php echo $_GET['order_id'];?>">
-                <input type="text" name="name" class="form-control" value="<?php echo $_SESSION['custName'];?>" readonly>
-               </div>
-
+			
 			<center><input type="submit" value="submit Feedback  " class="agileinfo" /></center>
 	  </form>
 	</div>
 	<div class="agileits_copyright text-center">
 			<p>© 2022</p>
 	</div>
-}
 </body>
 </html>
 
