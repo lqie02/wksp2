@@ -20,7 +20,9 @@
 
 }
 ?>
-
+<head>
+  <link href="css/stylerate.css" rel="stylesheet" type="text/css" media="all" />
+</head>
 <body>
 	<div class="container">
 		<?php if(isset($_GET['order_id'])){
@@ -30,6 +32,12 @@
 	      if(isset($order_info) && $order_info->num_rows > 0 ){ 
 	    ?>
 
+    <h1 class="agile_head text-center">Rate Us</h1>
+    <div class="w3layouts_main wrap">
+    <h3>Please help us to serve you better by taking a couple of minutes. </h3>
+      <form action="rating.php" method="post" class="agile_form">
+      <h2>How satisfied were you with our Service?</h2>
+       <ul class="agile_info_select">
 	    <form method="POST" action="<?php echo $_SERVER['PHP_SELF'].'?order_id='.$_GET['order_id'];?>" class="form-horizontal" style="margin-top: 30px;">
 	    	<div class="form-group required">
                <label class="control-label col-sm-2" for="input-review">Name</label>
@@ -42,26 +50,29 @@
 	    	</div>
 	    	<div class="form-group required">
 	    		  <label class="control-label col-sm-2" for="input-review">Review</label>
-                  <div class="col-sm-10">
+                  <div>
                   	<textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
                   </div>
             </div>
-            <div class="form-group required">
-            	  <label class="control-label col-sm-2">Rrating</label>
-                  <div class="col-sm-10">
-                  	
-                    &nbsp;&nbsp;&nbsp; Bad&nbsp;
-                     <input type="radio" name="rating" value="1" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="2" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="3" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="4" />
-                    &nbsp;
-                    <input type="radio" name="rating" value="5" />
-                    &nbsp;Good
-                  </div>
+          <h2 >How satisfied were you with our Service?</h2>
+       <ul class="agile_info_select">
+            	  
+                  <li><input type="radio" name="view" value="excellent" id="excellent" required> 
+            <label for="excellent">excellent</label>
+              <div class="check w3"></div>
+         </li>
+         <li><input type="radio" name="view" value="good" id="good"> 
+            <label for="good"> good</label>
+              <div class="check w3ls"></div>
+         </li>
+         <li><input type="radio" name="view" value="neutral" id="neutral">
+           <label for="neutral">neutral</label>
+             <div class="check wthree"></div>
+         </li>
+         <li><input type="radio" name="view" value="poor" id="poor"> 
+            <label for="poor">poor</label>
+              <div class="check w3_agileits"></div>
+         </li>
             </div>
 
            <div class="form-group ">
