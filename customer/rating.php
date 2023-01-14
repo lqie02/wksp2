@@ -24,7 +24,7 @@
   <link href="css/stylerate.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-	<div class="container">
+
 		<?php if(isset($_GET['order_id'])){
             $order_info = mysqli_query($conn,"SELECT * FROM orders WHERE order_id='".$_GET['order_id']."'");
           }
@@ -42,7 +42,7 @@
 	    	<div class="form-group required">
                <label class="control-label col-sm-2" for="input-review">Name</label>
 
-               <div class="col-sm-10">
+               <div class="col-sm-15">
                	<input type="hidden" name="order_id" value="<?php echo $_GET['order_id'];?>">
                 <input type="text" name="name" class="form-control" value="<?php echo $_SESSION['custName'];?>" readonly>
                </div>
@@ -73,8 +73,7 @@
             <label for="poor">poor</label>
               <div class="check w3_agileits"></div>
          </li>
-            </div>
-
+          </div>
            <div class="form-group ">
            	<label class="control-label col-sm-2"></label>
 	    	<input type="submit" name="submit" value="Submit" class="btn btn-primary">
