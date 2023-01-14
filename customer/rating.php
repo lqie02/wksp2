@@ -1,4 +1,5 @@
-<?php $title = "Rating"; include('header.php') ;?>
+    <link rel="stylesheet" a href="../footer.css">
+    <?php $title = "Rating"; include('header.php') ;?>
 
 <?php if(isset($_POST['submit'])){
     
@@ -84,5 +85,6 @@
 			<h2 style="text-align:center;">Order Not Found</h2>
 		<?php } ?>
 	</div>
+   <?php include('../footer.php');?>
 </body>
 

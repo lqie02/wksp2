@@ -8,6 +8,7 @@
 			margin-left: 140px;
 		}
 	</style>
+	      <link rel="stylesheet" a href="../footer.css">  
 <body class="location">
 	<div class="container">
 	  <div class="contact">
@@ -24,5 +25,6 @@
 		  
 	  </div>
 	</div>
+	 <?php include('../footer.php');?>
 </body>
 </html>

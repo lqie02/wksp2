@@ -1,4 +1,5 @@
-<?php 
+    <link rel="stylesheet" a href="../footer.css">  <?php 
+
 $title = "Payment Page"; include('header.php');
 
 
@@ -112,3 +113,4 @@ $title = "Payment Page"; include('header.php');
   <h2  class = "location-logo">Sorry Order Error</h2>
   <h3 style="text-align: center;">Contact Admin</h3>
 <?php } ?>
+ <?php include('../footer.php');?>

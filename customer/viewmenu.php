@@ -1,3 +1,4 @@
+
 <?php ob_start(); $title = "Menu"; include('header.php') ;?>
 <?php include('sidebar.php') ;?>
 <body>
@@ -91,6 +92,7 @@ function addCart(item_id){
 
 <!-- custom js file link  -->
 <script src="../js/script.js"></script>
+
 
 </body>
 </html>

@@ -185,6 +185,5 @@ function update(item_id){
   });
 };
 //--></script>
-
 </body>
 </html>
