@@ -13,13 +13,13 @@ if(isset($_GET['dt'])){
 	<div class="container">
      <button style="margin-top:50px; margin-bottom: 10px" class="btn btn-primary" onclick="popup_box('','Add Category');"> ADD NEW </button>
 	 <table  class="table table-bordered table-hover">
-       <thead  class="table-dark">
+       <thead>
 		   <tr style="font-size: 17px">
-       	 <td width="15px">No.</td>
-       	 <td >Name</td>
-       	 <td>Description</td>
-       	 <td><center>Action</center></td>
-		   </tr>
+       	 <td style="width:10px;"><b>NO.</b></td>
+       	 <td ><b>NAME</b></td>
+       	 <td><b>DESCRIPTION</b></td>
+       	 <td><center><b>ACTION</b></center></td>
+			   </tr>
        </thead>
        <tbody>
          <?php $category = mysqli_query($conn,"SELECT * FROM category "); ?>
@@ -37,7 +37,7 @@ if(isset($_GET['dt'])){
             <?php $no++; }?>
 	        <?php }else {?>
 	        <tr>
-	        	<td colspan="5"><div class='empty'>no product added</div></td>
+	        	<td colspan="5"><div class='empty'>No product added</div></td>
 
 	        </tr>
 	        <?php }?>
