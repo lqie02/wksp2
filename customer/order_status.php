@@ -21,37 +21,37 @@ else{
 
 <?php include('header.php'); ?>
 		
-			  <br><br><br>
-				<!--<h2 class="txt1">Delivered History</h2>-->     
-		  	 
-			<div class="container">
-			<table class="table table-hover text-center">
-				 <thead class="table-dark">
-				
-				<tr>
-					
-					<th scope="col">ORDER ID</th>
-					<th scope="col">DATE AND TIME</th>	
-					<th scope="col">STATUS</th>						
-				</tr>
-			    </thead>
-				<tbody>
-				
-
-<?php if(isset($_GET['orderStatus'])){
-            $status = mysqli_query($conn,"SELECT * FROM orders WHERE orderStatus='".$_GET['orderStatus']."'");}
-
-             $row = mysqli_fetch_assoc($status);
-
-  if(isset($row['orderStatus'])){
-    $orderStatus = $row['orderStatus'];}?>
-     
-	  <td><?php echo $row['order_id'] ?></td>
-	  <td><?php echo $row['orderDate'] ?></td>
-	  <td><?php echo $row['orderStatus'] ?></td>
-
-
-
-	</tr>
+			 
 
 </tbody>
+
+ <?php $order_status = mysqli_query($conn,"SELECT orderStatus, orderDate FROM orders WHERE customer_id='".$customer_id."'");?>
+
+  <div class="resipt" style="width:350px; margin: 20px auto; text-align: center;">
+    FK Restaurant<br/>
+    Address 1<br/>
+    Address 2 <br/>
+    387398 Selangor<br/>
+    Malaysia
+    <hr>
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <td> NO </td>
+          <td> ORDER STATUS </td>
+           <td> DATE AND TIME </td>
+          
+        </tr>
+      </thead>
+      <tbody>
+    <?php $no =1; 
+
+     while($detail = mysqli_fetch_assoc($order_status)) { ?>
+       <tr>
+         <td style="padding:5px;"><?php echo $no;?></td>
+         <td style="padding:5px;"><?php echo $detail['orderStatus'];?></td>
+         <td style="padding:5px;"><?php echo $detail['orderDate'];?></td>
+         
+       </tr>
+    <?php $no++; } ?>
+    </tbody>
