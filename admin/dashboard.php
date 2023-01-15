@@ -6,7 +6,7 @@ if(isset($_SESSION["staff_id"]))
 	$id= $_SESSION["staff_id"];
 	$name= $_SESSION["staffName"];
 	
-	if((time()-$_SESSION['Active_Time'])>300)
+	if((time()-$_SESSION['Active_Time'])>20000)
 	{
 		header('Location:../loginS.php');
 	}
@@ -45,6 +45,8 @@ else{
 	<p class="txt1">Current Date : <span id="date-today"></span></p>
 	<p class="txt2">Current Time : 
 		<span id="current-time"></span>	
+		
+		
 	</div>
 	
 	
