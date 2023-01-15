@@ -25,7 +25,7 @@ $title = "Payment Page"; include('header.php');
            }
 
            //add main order 
-           $order_query = mysqli_query($conn,"INSERT INTO orders SET amount = '" .(float)$total ."', qty = '" .(int)$total_qty . "', orderStatus ='Pending', discount ='".(float)$_POST['discount_total']."', total = '".(float)$_POST['final_total']."', customer_id = '".$_SESSION['customer_id']."', orderDate = NOW() ");
+           $order_query = mysqli_query($conn,"INSERT INTO orders SET amount = '" .(float)$total ."', qty = '" .(int)$total_qty . "', orderStatus ='Succesful', discount ='".(float)$_POST['discount_total']."', total = '".(float)$_POST['final_total']."', customer_id = '".$_SESSION['customer_id']."', orderDate = NOW() ");
 
            $order_id =mysqli_insert_id($conn);
 
