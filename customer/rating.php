@@ -74,11 +74,9 @@
             <label for="poor">poor</label>
               <div class="check w3_agileits"></div>
          </li>
-          </div>
-           <div class="form-group ">
-           	<label class="control-label col-sm-2"></label>
-	    	<input type="submit" name="submit" value="Submit" class="btn btn-primary">
-	       </div>
+       
+	    	      <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+	        </div>
 	    </form>
 
 		<?php } else { ?>

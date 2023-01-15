@@ -223,6 +223,9 @@ ul li .check{
 	border-radius: 5px;
 	border: 1px solid #696867;
     background: rgba(16, 16, 16, 0.47);
+    height: 40px;
+    margin: 15px auto;
+    display: block;
 }
 
 .agile_form input[type="submit"]:hover{
