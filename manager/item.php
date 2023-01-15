@@ -12,7 +12,7 @@ if(isset($_GET['delete'])){
       header('location:/wksp2/manager/item.php');
       $message[] = 'product has been deleted';
    }else{
-      header('location:/wksp2/manager/item.php');
+      header('location:/wksp2/manager/item.php'); 
       $message[] = 'product could not be deleted';
    };
 }
@@ -79,22 +79,22 @@ if(isset($_GET['delete'])){
 <section>
  <?php $category_query = mysqli_query($conn,"SELECT * FROM `category`");?>
 <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
-   <h3>Add a new product</h3>
-   <input type="text" name="p_name" placeholder="enter the product name" class="box" required>
-   <input type="number" name="p_price" min="0" placeholder="enter the product price" class="box" required>
-   <select name="p_category_id" >
+   <h3>Add a New Product</h3>
+   <input type="text" name="p_name" placeholder="Enter the product name" class="box" style="font-size: 15px" required>
+   <input type="number" name="p_price" min="0" placeholder="Enter the product price" class="box" style="font-size: 15px" required>
+   <select name="p_category_id" style="font-size: 15px">
       	<?php while($fetch_category = mysqli_fetch_assoc($category_query)) {?>
       	<option value="<?php echo $fetch_category['category_id'];?>" ><?php echo $fetch_category['categoryName'];?></option>
         <?php } ?>
    </select>
 
-      <input type="varchar" name="p_status" min="0" placeholder="enter the status" class="box" required>
+      <input type="varchar" name="p_status" min="0" placeholder="Enter the status" class="box" style="font-size: 15px" required>
       <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" style="display: inline;" required>
-      <input type="submit" value="add the product" name="add_product" class="btn" style="margin-bottom:20px;">
+      <input type="submit"  value="Add product" name="add_product" class="btn btn-primary" style="margin-bottom:5px; font-size: 15px">
 </form>
 
 </section>
-
+<br>
 <section class="display-product-table">
 
    <table class="table table-bordered table-hover">
@@ -119,8 +119,9 @@ if(isset($_GET['delete'])){
               	<td><?php echo $item['itemName'];?></td>
               	<td>RM <?php echo $item['unitPrice'];?></td>
               	<td>
-	               <a href="item.php?delete=<?php echo $item['item_id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash"></i> delete </a> &nbsp;&nbsp;
-	               <a href="item.php?edit=<?php echo $item['item_id']; ?>" class="option-btn"> <i class="fas fa-edit"></i> update </a>
+				   <a href="item.php?edit=<?php echo $item['item_id']; ?>" style='color: black' class="option-button"> <i class="fas fa-edit" style='color: black'></i> Update </a>&nbsp;&nbsp;
+	               <a href="item.php?delete=<?php echo $item['item_id']; ?>" style='color: black' class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"> <i class="fas fa-trash" style='color: black'></i> Delete </a> 
+	              
 	            </td>
               </tr>
 	        <?php  $no++; } ?>
