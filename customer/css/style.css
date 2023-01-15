@@ -45,7 +45,7 @@ body {
 
 .menu-bar ul li {
   /* width: 120px; */
-  padding: 10px 30px;
+  padding: 10px 20px;
   /* text-align: center; */
 
   position: relative;
@@ -365,3 +365,10 @@ input::-moz-focus-inner {
 }
 .button3 {width: 100%;}
 
+.order_status{
+  background: #ededed;
+}
+.thead-dark{
+  background: #000;
+  color: #fff;
+}

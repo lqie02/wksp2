@@ -1,45 +1,28 @@
-<?php/*
-session_start();
-include('../connection.php');
-if(isset($_SESSION["customer_id"]))
-{
-	$id = $_SESSION["customer_id"];
-	
-	if((time()-$_SESSION['Active_Time'])>300)
-	{
-		header('Location:../index.php');
-	}
-	else
-	{
-		$_SESSION['Active_Time'] = time();
-	}
-}
-else{
-	header('Location: ../index.php');
-}
-?>
 
-<?php  include('header.php'); ?>
+
+<?php  $title="Order Status"; include('header.php'); ?>
 		
-			 
+<?php $customer_id = $_SESSION['customer_id'];?>		 
 
-</tbody>
+<body class="order_status">
 
- <?php $order_status = mysqli_query($conn,"SELECT orderStatus, orderDate FROM orders WHERE customer_id='".$customer_id."'");?>
+ <?php $order_status = mysqli_query($conn,"SELECT *,ors.order_id As order_id_orders  FROM orders ors LEFT JOIN delivery dly ON(dly.order_id = ors.order_id) WHERE ors.customer_id='".$customer_id."' ORDER By ors.orderDate DESC");?>
 
-  <div class="resipt" style="width:350px; margin: 20px auto; text-align: center;">
+  <div class="resipt " style="width: 600px; margin: 20px auto; text-align: center;">
     FK Restaurant<br/>
     Address 1<br/>
     Address 2 <br/>
     387398 Selangor<br/>
     Malaysia
     <hr>
-    <table style="width:100%">
-      <thead>
+    <table class="table table-hover table-striped" style="width:100%">
+      <thead class="thead-dark">
         <tr>
-          <td> NO </td>
-          <td> ORDER STATUS </td>
-           <td> DATE AND TIME </td>
+          <td style="padding:5px;"> NO </td>
+          <td style="padding:5px;"> Order ID </td>
+          <td style="padding:5px;"> ORDER STATUS </td>
+          <td style="padding:5px;"> DELIVERY STATUS </td>
+          <td style="padding:5px;"> DATE AND TIME </td>
           
         </tr>
       </thead>
@@ -49,9 +32,15 @@ else{
      while($detail = mysqli_fetch_assoc($order_status)) { ?>
        <tr>
          <td style="padding:5px;"><?php echo $no;?></td>
+         <td style="padding:5px;">#<?php echo $detail['order_id_orders'];?></td>
          <td style="padding:5px;"><?php echo $detail['orderStatus'];?></td>
+         <td style="padding:5px;"><?php echo $detail['deliveryStatus'] ? $detail['deliveryStatus'] : 'Missing Order';?></td>
          <td style="padding:5px;"><?php echo $detail['orderDate'];?></td>
          
        </tr>
     <?php $no++; } ?>
     </tbody>
+</table>
+
+</div>
+</body>
