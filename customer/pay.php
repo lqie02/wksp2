@@ -59,7 +59,6 @@ table, th, td {
   border: 1.5px solid black;
 
 }
-tr:hover {background-color:#ffd9b3;}
 </style>
 <?php if(isset($order_id)){ unset($_SESSION['items']); unset($_SESSION['order']);?>
   <h2  class = "location-logo">Thank You For Your Payment</h2>
@@ -102,15 +101,15 @@ tr:hover {background-color:#ffd9b3;}
     </tbody>
     <tfoot>
       <tr>
-        <td><h2 colspan="6" style="text-align:left;">Sub Total </td>
+        <td><h2 colspan="6" style="background-color: #ffd9b3"style="text-align:left;">Sub Total </td>
         <td><h2>RM <?php echo $row['amount'];?></td>
       </tr>
        <tr>
-        <td><h2 colspan="6" style="text-align:left;">Discount </td>
+        <td><h2 colspan="6" style= "background-color: #ffd9b3"  style="text-align:left;">Discount </td>
         <td><h2>RM <?php echo $row['discount'];?></td>
       </tr>
       <tr>
-        <td><h2 colspan="6" style="text-align:left;">Total </td>
+        <td><h2 colspan="6"style="background-color: #ffd9b3" style="text-align:left;">Total </td>
         <td><h2>RM <?php echo $row['total'];?></td>
       </tr>
     </tfoot>
