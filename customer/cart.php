@@ -46,7 +46,7 @@ body {
           }
       ?>
          <td style="padding: 10px;"><h2><?php echo $no;?></h2></td>
-         <td style="padding: 10px;"><img src="/fkfood<?php echo $row['image']; ?>" style="height: 150px;"></td>
+         <td style="padding: 10px;"><img src="/wksp2<?php echo $row['image']; ?>" style="height: 150px;"></td>
          <td style="padding: 10px;"><h3><?php echo $row['itemName']; ?></h3></td>
          <td style="padding: 10px;"><h3>RM <?php echo $row['unitPrice']; ?></h3></td>
          <td><input type="number" name="qty[<?php echo $key;?>]" id="qty-<?php echo $key;?>" value="<?php echo $qty;?>" style="height: 32px;font-size: 16px;width: 100px;"><button type="button" data-toggle="tooltip" title="" class="btn btn-primary" onclick="update(<?php echo $key;?>);" data-original-title="Update" style="margin-top: 0px;"><i class="fa fa-refresh"></i></button></td>
