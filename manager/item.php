@@ -127,7 +127,7 @@ if(isset($_GET['delete'])){
 	        <?php  $no++; } ?>
 	     <?php } else {?>
            <tr>
-           	<td colspan="5"><div class='empty'>no product added</div></td>
+           	<td colspan="5"><div class='empty'>No product added</div></td>
            </tr>
 	     <?php } ?>
         
@@ -149,12 +149,12 @@ if(isset($_GET['delete'])){
        	$category_query = mysqli_query($conn,"SELECT * FROM `category`");
    ?>
 
-   <form action="" method="post" enctype="multipart/form-data" style="margin-bottom: 30px;">
+   <form action="" method="post" enctype="multipart/form-data" style="margin-bottom: 30px;"><br><br>
 
       <img src="../<?php echo $row['image']; ?>" style="width: 150px;margin-right: 30px;" alt="">
       <input type="hidden" name="image" value="<?php echo $row['image'];?>">
       <input type="hidden" name="update_p_id" value="<?php echo  $row['item_id']; ?>">
-      <input type="text"  required name="update_p_name" value="<?php echo $row['itemName']; ?>">
+      <input type="text"  required name="update_p_name" style="margin-top: 30px;"  value="<?php echo $row['itemName']; ?>">
       <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $row['unitPrice']; ?>">
       <input type="varchar" min="0" class="box" required name="update_p_status" value="<?php echo $row['itemStatus']; ?>"><br/>
       <div style="margin-bottom:10px;"></div>
@@ -169,7 +169,7 @@ if(isset($_GET['delete'])){
       </select>
       <input type="file" name="update_p_image" accept="image/png, image/jpg, image/jpeg" style="display:inline;">
 
-      <input type="submit" value="update the product" name="update_product" class="btn">
+      <input type="submit" value="Update the product" name="update_product" class="btn">
    </form>
 
    <?php
