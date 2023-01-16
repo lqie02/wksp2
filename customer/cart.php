@@ -91,7 +91,7 @@
     </table>
 
     <div class="pull-left" style="margin-bottom: 30px;">
-    	<input type="submit" name="Pay Now" value="pay" class="btn btn-primary">
+    	<input type="submit" name="Pay_Now" value="pay" class="btn btn-primary">
     </div>
 
    </form>
