@@ -15,14 +15,14 @@ body {
 
 <section class="products">
 <br><br>
-   <h1 class="heading">Side Dishes</h1>
+   <center><h1 class="heading">Main Dishes</h1>
    <div class="msg"></div>
    <div class="row">
    <div class="box-container" id="product">
 
       <?php
 
-      $sql = "SELECT * FROM item where category_id = '6002' ";
+      $sql = "SELECT * FROM item where category_id = '6000' ";
 
       $implode = array();
 
@@ -44,7 +44,7 @@ body {
        
 
         <!--   border for product -->
-          <div class="col-md-6">
+          <div class="col-md-14">
             <form method="post">
           <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:10px; padding:16px;" align="center">
 

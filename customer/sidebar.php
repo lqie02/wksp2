@@ -10,8 +10,10 @@
 <!-- /*Color sidebar*/ -->
 <div class="w3-sidebar w3-win8-sienna w3-panel w3-border-black w3-bar-block" style="width:10%">
   <h3><a href="viewmenu.php"  class="w3-bar-item w3-button">Menu</a></h3>
+
+  <a href="smain.php" class="w3-bar-item w3-button">Main Dishes</a>
+    <a href="sdishes.php" class="w3-bar-item w3-button">Side Dishes</a>
   <a href="sdrinks.php" class="w3-bar-item w3-button">Beverages</a>
-  <a href="sdishes.php" class="w3-bar-item w3-button">Side Dishes</a>
    <a href="spasta.php" class="w3-bar-item w3-button">Pasta</a>
      <a href="sdesserts.php" class="w3-bar-item w3-button">Desserts</a>
 </div>

@@ -1,12 +1,20 @@
 <?php ob_start(); $title = "Menu"; include('header.php') ;?>
 
-<center><?php include('sidebar.php') ;?></center>
+<center><?php include('sidebar.php') ;?></center>\
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 <body>
 
 <div class="container">
 
 <section class="products">
-
+<br>
    <h1 class="heading">Desserts</h1>
    <div class="msg"></div>
    <div class="row">

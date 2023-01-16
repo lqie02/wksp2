@@ -1,6 +1,14 @@
 <?php  $title="Order Status"; include('header.php'); ?>
 		
 <?php $customer_id = $_SESSION['customer_id'];?>		 
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 
 </tbody>
 
