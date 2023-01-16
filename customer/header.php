@@ -39,8 +39,8 @@
        <li><a href="homepage.php">Home  <i class="fa fa-home"></i></a></li>
        <li><a href="viewmenu.php">Menu<i class="fas fa-drumstick-bite"></i></a></li>
         <li><a href="edit.php">Edit Profile <i class="fa fa-user"></i></a></li>
-        <li><a href="contact.php">Contact us  <i class="fa fa-phone"></i></a></li>
         <li><a href="cart.php">View Cart <i class="fa fa-cart-plus"></i></a></li>
         <li><a href="order_status.php">Order Status <i class="far fa-file-alt"></i></a></li>
+          <li><a href="contact.php">Contact us  <i class="fa fa-phone"></i></a></li>
         <li><a href="logout.php">Logout</a></li>
     </div>
