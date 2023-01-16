@@ -142,7 +142,7 @@ function updateDiscount(){
 function remove(item_id){
   var post_value = { item_id : item_id, post_type: 'remove' }
   $.ajax({
-    url: '/fkfood/customer/addCart.php',
+    url: '/wksp2/customer/addCart.php',
     type: 'post',
     data: post_value,
     dataType: 'json',
