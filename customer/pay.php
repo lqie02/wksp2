@@ -48,7 +48,14 @@ $title = "Payment Page"; include('header.php');
       
     }//end post if
 ?>
-
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 <?php if(isset($order_id)){ unset($_SESSION['items']); unset($_SESSION['order']);?>
   <h2  class = "location-logo">Thank You For Your Payment</h2>
   <h3 style="text-align: center;">Order Placed : Order ID #<?php echo $order_id;?></h3>

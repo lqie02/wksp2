@@ -3,7 +3,14 @@
 <?php  $title="Order Status"; include('header.php'); ?>
 		
 <?php $customer_id = $_SESSION['customer_id'];?>		 
-
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 <body class="order_status">
 
  <?php $order_status = mysqli_query($conn,"SELECT *,ors.order_id As order_id_orders  FROM orders ors LEFT JOIN delivery dly ON(dly.order_id = ors.order_id) WHERE ors.customer_id='".$customer_id."' ORDER By ors.orderDate DESC");?>

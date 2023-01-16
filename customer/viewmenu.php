@@ -1,17 +1,24 @@
 
 <?php ob_start(); $title = "Menu"; include('header.php') ;?>
 <?php include('sidebar.php') ;?>
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 <body>
-<div style="background-color:#f5f5f0">
+
 <div class="container">
-<p style="background-image: url('background.jpeg');">
 <section class="products">
-<div style="background-color:#f5f5f0">
+
    <h1 class="heading">MENU</h1>
    <div class="msg"></div>
    <div class="row">
    <div class="box-container" id="product">
-<div style="background-color:#f5f5f0">
+
       <?php
 
       $sql = "SELECT * FROM item ";

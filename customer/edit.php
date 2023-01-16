@@ -31,6 +31,14 @@
   <script src="java.js"></script>  
   <title>Customer Details</title>  
 </head>
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 <body>
 
 

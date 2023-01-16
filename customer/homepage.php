@@ -40,9 +40,16 @@
 }
 
 </style>
-<div style="background-color:#f5f5f0">
+
 </head>
-<div style="background-color:#f5f5f0">
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 <body>
 <div class="slideshow-container">
 
