@@ -8,6 +8,7 @@ body {
 }
 table, th, td {
   border: 1.5px solid black;
+	margin-left: 80px;
 
 }
 tr:hover {background-color:#ffd9b3;}
@@ -20,20 +21,20 @@ tr:hover {background-color:#ffd9b3;}
    <?php if (isset($_SESSION['items']) && !empty($_SESSION['items'])){?>
     <form action="pay.php" method="POST" class="pay">
      <thead>
-  <h1 class="heading">Your Cart</h1>&nbsp;
+  <h1 class="heading" style="margin-left: 120px">Your Cart</h1>&nbsp;
    <br>
    <div class="header">
 </div>
 
-<table style="width:110%">
+<table style="width:110%;">
     <tr>
-       <td style="padding: 10px;"><h2>No</h2></td>
+       <td style="padding: 10px;"><h2>No.</h2></td>
      	 <td style="padding: 10px;"><h2>Product</h2></td>
      	 <td style="padding: 10px;"><h2>Name</h2></td>
      	 <td style="padding: 10px;"><h2>Price</h2></td>
      	 <td style="padding: 10px;"><h2>Quantity</h2></td>
      	 <td style="padding: 10px;"><h2>Total</h2></td>
-       <td></td></tr>
+       </tr>
      </thead>
       <?php $no = 1; $total = 0; foreach($_SESSION['items'] as $key => $qty) { ?>
       	<tr>
@@ -56,22 +57,25 @@ tr:hover {background-color:#ffd9b3;}
          <td style="padding: 10px;"><img src="/wksp2<?php echo $row['image']; ?>" style="height: 150px;"></td>
          <td style="padding: 10px;"><h3><?php echo $row['itemName']; ?></h3></td>
          <td style="padding: 10px;"><h3>RM <?php echo $row['unitPrice']; ?></h3></td>
-         <td><input type="number" name="qty[<?php echo $key;?>]" id="qty-<?php echo $key;?>" value="<?php echo $qty;?>" style="height: 32px;font-size: 20px;width: 100px;"><button type="button" data-toggle="tooltip" title="" class="btn btn-primary" onclick="update(<?php echo $key;?>);" data-original-title="Update" style="margin-top: 0px;"><i class="fa fa-refresh"></i></button></td>
-         <td style="padding: 10px; font-weight: bold;"><h3>RM <?php echo $row['unitPrice']*$qty; ?></h3></td>
-         <td><button type="button" data-toggle="tooltip" title="" class="btn btn-danger" onclick="remove(<?php echo $key;?>);" data-original-title="Remove"><i class="fa fa-times-circle"></i></button></td>
+        
+		<td>&nbsp;&nbsp;&nbsp;<input type="number"   name="qty[<?php echo $key;?>]" id="qty-<?php echo $key;?>" value="<?php echo $qty;?>" style="height: 55px;font-size: 20px;width: 40px;">
+		<button type="button" data-toggle="tooltip" title="" class="btn btn-primary" onclick="update(<?php echo $key;?>);" data-original-title="Update" style="margin-top: 0px;"><i class="fa fa-refresh"></i></button></td>
+        
+		<td style="padding: 10px; font-weight: bold;">
+		<h3 style="height: 32px;font-size: 20px;width: 100px;">RM <?php echo $row['unitPrice']*$qty; ?> &nbsp;<button type="button" style="margin-bottom: :10px;" data-toggle="tooltip" title="" class="btn btn-danger" onclick="remove(<?php echo $key;?>);" data-original-title="Remove"><i class="fa fa-times-circle"></i></button></h3></td>
            
        <?php  } ?>
        </tr>
       <?php $no++; } ?>
      <tfoot>
       <tr>
-        <td  colspan="1" style="width:100px">Discount Code </td>
+        <td  colspan="1" style="width:100px; font-size: 13px ">&nbsp;Discount Code </td>
         <td>
           <input type="hidden" name="discount" value="<?php echo $discount;?>">
           <input type="text" value="<?php echo $code;?>" style="margin-left: 20px;height: 32px;font-size: 16px;width: 200px;" id="discount" name="discount"><button type="button" data-toggle="tooltip" title="" class="btn btn-primary" onclick="updateDiscount();" data-original-title="Update" style="margin-top: 0px;"><i class="fa fa-refresh"></i></button></td>
       </tr>
       <tr>
-      <td colspan="1" >Payment Option </td>
+      <td colspan="1" style="font-size: 13px"  >&nbsp;Payment Option </td>
 
       <td colspan="2"><select  name="payMethod" style="margin-left: 20px;height: 32px;font-size: 16px;width: 200px;">
         <option value="cash">C.O.D</option>
@@ -103,7 +107,7 @@ tr:hover {background-color:#ffd9b3;}
      </tfoot>
     </table>
 
-    <div class="pull-left" style="margin-bottom: 30px;">
+    <div class="pull-left" style="margin-bottom:30px;">
     	<input type="submit" name="Pay_Now" value="pay" class="btn btn-primary">
     </div>
 

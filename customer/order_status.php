@@ -16,11 +16,11 @@ body {
  <?php $order_status = mysqli_query($conn,"SELECT *,ors.order_id As order_id_orders  FROM orders ors LEFT JOIN delivery dly ON(dly.order_id = ors.order_id) WHERE ors.customer_id='".$customer_id."' ORDER By ors.orderDate DESC");?>
 
   <h3><div class="resipt " style="width: 600px; margin: 20px auto; text-align: center;">
-    FK Restaurant<h3><br/>
-    Address 1<br/>
-    Address 2 <br/>
-    387398 Selangor<br/>
-    Malaysia
+   <h2><b> Foreign Key Restaurant</b><br/></h2>
+    <h3>Lorong Bukit Beruang Utama 1, <br/>
+    75450 Ayer Keroh, <br/>
+		Melaka, Malaysia<br/></h3>
+    
     <hr>
     <table class="table table-hover table-striped" style="width:100%">
       <thead class="thead-dark">

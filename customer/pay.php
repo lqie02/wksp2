@@ -57,8 +57,12 @@ body {
 }
 table, th, td {
   border: 1.5px solid black;
+  margin-left: -300px;
 
 }
+	hr{
+		border: 1.5px solid black;
+	}
 </style>
 <?php if(isset($order_id)){ unset($_SESSION['items']); unset($_SESSION['order']);?>
   <h2  class = "location-logo">Thank You For Your Payment</h2>
@@ -70,20 +74,20 @@ table, th, td {
   <?php $order_details = mysqli_query($conn,"SELECT * FROM order_detail WHERE order_id='".$order_id."'");?>
 
   <h2><div class="receipt" style="width:350px; margin: 20px auto; text-align: center;">
-    FK Restaurant<h2><br/>
-    Address 1<br/>
-    Address 2 <br/>
-    387398 Selangor<br/>
-    Malaysia
+    <b>FK Restaurant</b><h2><br/>
+    Lorong Bukit Beruang Utama 1<br/>
+    75450 Ayer Keroh <br/>
+    Melaka, Malaysia<br/>
+   
     <hr>
-    <table style="width:200%" >
+    <table style="width:300%" >
       <thead>
         <tr>
-         <td><h2> NO. </h2></td>
-          <td><h2>Item</h2></td>
-          <td><h2>QTY</h2></td>
-          <td><h2>Price</h2></td>
-          <td><h2>Total</h2></td>
+         <td><h2>&nbsp; NO. </h2></td>
+          <td><h2>&nbsp;ITEM</h2></td>
+          <td><h2>&nbsp;QTY</h2></td>
+          <td><h2>&nbsp;PRICE</h2></td>
+          <td><h2>&nbsp;TOTAL</h2></td>
         </tr>
       </thead>
       <tbody>
@@ -101,15 +105,15 @@ table, th, td {
     </tbody>
     <tfoot>
       <tr>
-        <td><h2 colspan="6" style="background-color: #ffd9b3"style="text-align:left;">Sub Total </td>
+        <td><h2 colspan="6" style="background-color: #ffd9b3"style="text-align:left;">&nbsp;Sub Total </td>
         <td><h2>RM <?php echo $row['amount'];?></td>
       </tr>
        <tr>
-        <td><h2 colspan="6" style= "background-color: #ffd9b3"  style="text-align:left;">Discount </td>
+        <td><h2 colspan="6" style= "background-color: #ffd9b3"  style="text-align:left;">&nbsp;Discount </td>
         <td><h2>RM <?php echo $row['discount'];?></td>
       </tr>
       <tr>
-        <td><h2 colspan="6"style="background-color: #ffd9b3" style="text-align:left;">Total </td>
+        <td><h2 colspan="6"style="background-color: #ffd9b3" style="text-align:left;">&nbsp;Total </td>
         <td><h2>RM <?php echo $row['total'];?></td>
       </tr>
     </tfoot>
@@ -120,8 +124,5 @@ table, th, td {
   <h2><a href="/wksp2/customer/rating.php?order_id=<?php echo $order_id;?>">Rate us</a></h2>
 </div>
 
-<?php } else { ?>
-  <h2  class = "location-logo">Sorry Order Error</h2>
-  <h3 style="text-align: center;">Contact Admin</h3>
-<?php } ?>
+<?php }  ?>
  <?php include('../footer.php');?>
