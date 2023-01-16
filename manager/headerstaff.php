@@ -36,7 +36,7 @@
         <i class="fas fa-bars"></i>
 		</label>
 		<!--<label class="logo">FK Restaurant</label>-->
-		<img src="../img/logo.png" type="image/png" alt="FK Restaurant">
+		<img src="../img/2.png" type="image/png" alt="FK Restaurant">
 		<label class="logo" >FK Restaurant</label>
 		<ul>
 		<li><a  class="active" href="dashboard.php">Home</a></li>
