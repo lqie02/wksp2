@@ -34,7 +34,8 @@
 </head>
 
    <div class="menu-bar">
-      <h1 class="logo">FK<span>Restaurant</span></h1>
+    <img src="../img/kecik.png" type="image/png" alt="FK Restaurant">
+   <!--    <h1 class="logo">Restaurant</h1> -->
       <ul>     
        <li><a href="homepage.php">Home  <i class="fa fa-home"></i></a></li>
        <li><a href="viewmenu.php">Menu<i class="fas fa-drumstick-bite"></i></a></li>
