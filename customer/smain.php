@@ -22,7 +22,7 @@ body {
 
       <?php
 
-      $sql = "SELECT * FROM item where category_id = '6000' ";
+      $sql = "SELECT * FROM item where category_id = '6015' ";
 
       $implode = array();
 
