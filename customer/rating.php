@@ -12,10 +12,12 @@
    $query = mysqli_query($conn,"INSERT INTO rating SET score='".$rating."', R_remark='".$_POST['text']."', order_id ='".$_POST['order_id']."'");
 
    if(mysqli_insert_id($conn)){
-   	 echo '<h2 style="text-align: center;">Thank You For Your Rating</h2>';
+  
+   echo '<script>alert("Thank You For Your Rating"); location.replace(document.referrer);</script>';
      exit;
    }else{
-      echo '<h3 style="text-align: center;">Error on submit pls try again!</h3>';
+    
+   echo '<script>alert("Error on submit, please try again!"); location.replace(document.referrer);</script>';
    }
    
 
@@ -24,6 +26,14 @@
 <head>
   <link href="css/stylerate.css" rel="stylesheet" type="text/css" media="all" />
 </head>
+<style>
+body {
+  background-image: url('../img/background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 <body>
 
 		<?php if(isset($_GET['order_id'])){

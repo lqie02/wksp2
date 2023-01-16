@@ -55,6 +55,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+table, th, td {
+  border: 1.5px solid black;
+
+}
+tr:hover {background-color:#ffd9b3;}
 </style>
 <?php if(isset($order_id)){ unset($_SESSION['items']); unset($_SESSION['order']);?>
   <h2  class = "location-logo">Thank You For Your Payment</h2>
@@ -65,21 +70,21 @@ body {
   ?>
   <?php $order_details = mysqli_query($conn,"SELECT * FROM order_detail WHERE order_id='".$order_id."'");?>
 
-  <div class="resipt" style="width:350px; margin: 20px auto; text-align: center;">
-    FK Restaurant<br/>
+  <h2><div class="receipt" style="width:350px; margin: 20px auto; text-align: center;">
+    FK Restaurant<h2><br/>
     Address 1<br/>
     Address 2 <br/>
     387398 Selangor<br/>
     Malaysia
     <hr>
-    <table style="width:100%">
+    <table style="width:200%" >
       <thead>
         <tr>
-          <td> NO. </td>
-          <td>Item</td>
-          <td>QTY</td>
-          <td>Price</td>
-          <td>Total</td>
+         <td><h2> NO. </h2></td>
+          <td><h2>Item</h2></td>
+          <td><h2>QTY</h2></td>
+          <td><h2>Price</h2></td>
+          <td><h2>Total</h2></td>
         </tr>
       </thead>
       <tbody>
@@ -87,26 +92,26 @@ body {
 
      while($detail = mysqli_fetch_assoc($order_details)) { ?>
        <tr>
-         <td style="padding:5px;"><?php echo $no;?></td>
-         <td style="padding:5px;"><?php echo $detail['name'];?></td>
-         <td style="padding:5px;"><?php echo $detail['quantity'];?></td>
-         <td style="padding:5px;">RM <?php echo $detail['price'];?></td>
-         <td style="padding:5px;">RM <?php echo $detail['price']*$detail['quantity'];?></td>
+         <td><h2 style="padding:5px;"><?php echo $no;?></h2></td>
+         <td><h2 style="padding:5px;"><?php echo $detail['name'];?></h2></td>
+         <td><h2 style="padding:5px;"><?php echo $detail['quantity'];?></h2></td>
+         <td><h2 style="padding:5px;">RM <?php echo $detail['price'];?></h2></td>
+         <td><h2 style="padding:5px;">RM <?php echo $detail['price']*$detail['quantity'];?></h2></td>
        </tr>
     <?php $no++; } ?>
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="4" style="text-align:right;">Sub Total</td>
-        <td>RM <?php echo $row['amount'];?></td>
+        <td><h2 colspan="6" style="text-align:left;">Sub Total </td>
+        <td><h2>RM <?php echo $row['amount'];?></td>
       </tr>
        <tr>
-        <td colspan="4" style="text-align:right;">Discount</td>
-        <td>RM <?php echo $row['discount'];?></td>
+        <td><h2 colspan="6" style="text-align:left;">Discount </td>
+        <td><h2>RM <?php echo $row['discount'];?></td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align:right;">Total</td>
-        <td>RM <?php echo $row['total'];?></td>
+        <td><h2 colspan="6" style="text-align:left;">Total </td>
+        <td><h2>RM <?php echo $row['total'];?></td>
       </tr>
     </tfoot>
    </table>

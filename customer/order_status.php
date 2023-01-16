@@ -15,8 +15,8 @@ body {
 
  <?php $order_status = mysqli_query($conn,"SELECT *,ors.order_id As order_id_orders  FROM orders ors LEFT JOIN delivery dly ON(dly.order_id = ors.order_id) WHERE ors.customer_id='".$customer_id."' ORDER By ors.orderDate DESC");?>
 
-  <div class="resipt " style="width: 600px; margin: 20px auto; text-align: center;">
-    FK Restaurant<br/>
+  <h3><div class="resipt " style="width: 600px; margin: 20px auto; text-align: center;">
+    FK Restaurant<h3><br/>
     Address 1<br/>
     Address 2 <br/>
     387398 Selangor<br/>
