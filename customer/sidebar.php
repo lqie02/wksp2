@@ -8,7 +8,7 @@
 
 <!-- Sidebar -->
 <!-- /*Color sidebar*/ -->
-<div class="w3-sidebar w3-win8-sienna w3-bar-block" style="width:10%">
+<div class="w3-sidebar w3-win8-sienna w3-panel w3-border-black w3-bar-block" style="width:10%">
   <h3><a href="viewmenu.php"  class="w3-bar-item w3-button">Menu</a></h3>
   <a href="sdrinks.php" class="w3-bar-item w3-button">Beverages</a>
   <a href="sdishes.php" class="w3-bar-item w3-button">Side Dishes</a>
