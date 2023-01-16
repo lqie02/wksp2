@@ -170,7 +170,7 @@ function update(item_id){
 
   var post_value = { item_id : item_id, post_type: 'update',qty : qty }
   $.ajax({
-    url: '/fkfood/customer/addCart.php',
+    url: '/wksp2/customer/addCart.php',
     type: 'post',
     data: post_value,
     dataType: 'json',
