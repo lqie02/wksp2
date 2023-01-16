@@ -1,6 +1,6 @@
 <?php ob_start(); $title = "Menu"; include('header.php') ;?>
 
-<center><?php include('sidebar.php') ;?></center>\
+<center><?php include('sidebar.php') ;?></center>
 <style>
 body {
   background-image: url('../img/background.jpeg');

@@ -19,9 +19,9 @@
       
 
         <p class="footer-links">
-          <a href="">Home</a>
+          <a href="homepage.php">Home</a>
           |
-          <a href="">Menu</a>
+          <a href="viewmenu.php">Menu</a>
           
       <!--<a href="">About</a>
           |
