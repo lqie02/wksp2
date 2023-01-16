@@ -23,7 +23,6 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="icon" href="img/tooth.png" type="image/png" sizes="20x20">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" a href="/fkfood/customer/css/stylee.css">  -->
       <link rel="stylesheet" a href="../footer.css">  

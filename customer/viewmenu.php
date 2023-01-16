@@ -2,16 +2,16 @@
 <?php ob_start(); $title = "Menu"; include('header.php') ;?>
 <?php include('sidebar.php') ;?>
 <body>
-
+<div style="background-color:#f5f5f0">
 <div class="container">
 <p style="background-image: url('background.jpeg');">
 <section class="products">
-
+<div style="background-color:#f5f5f0">
    <h1 class="heading">MENU</h1>
    <div class="msg"></div>
    <div class="row">
    <div class="box-container" id="product">
-
+<div style="background-color:#f5f5f0">
       <?php
 
       $sql = "SELECT * FROM item ";
@@ -31,7 +31,7 @@
 
       if($query->num_rows > 0){?>
        
-     
+     <div style="background-color:#f5f5f0">
 
         <?php while($fetch_product = mysqli_fetch_assoc($query)) { ?>
          <!--   border for product -->
@@ -51,15 +51,15 @@
       <?Php } else {?>
         <div class="empty"> Item not Found </div>
       <?php } ?>
-
+<div style="background-color:#f5f5f0">
    
    </div>
    </div>
-
+<div style="background-color:#f5f5f0">
 </section>
 
 </div>
-
+<div style="background-color:#f5f5f0">
 <script type="text/javascript"><!--
 function addCart(item_id){
   var post_value = { item_id : item_id, post_type: 'add' }
