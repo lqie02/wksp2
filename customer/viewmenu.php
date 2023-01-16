@@ -58,20 +58,17 @@ body {
       <?Php } else {?>
         <div class="empty"> Item not Found </div>
       <?php } ?>
-<div style="background-color:#f5f5f0">
    
    </div>
    </div>
-<div style="background-color:#f5f5f0">
 </section>
 
 </div>
-<div style="background-color:#f5f5f0">
 <script type="text/javascript"><!--
 function addCart(item_id){
   var post_value = { item_id : item_id, post_type: 'add' }
   $.ajax({
-    url: '/fkfood/customer/addCart.php',
+    url: '/wksp2/customer/addCart.php',
     type: 'post',
     data: post_value,
     dataType: 'json',
