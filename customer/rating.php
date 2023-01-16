@@ -2,26 +2,31 @@
     <?php $title = "Rating"; include('header.php') ;?>
 
 <?php if(isset($_POST['submit'])){
+	
+
     
-    if(isset($_POST['rating'])){
-    	$rating = $_POST['rating'];
-    }else{
-    	$rating = 0;
-    }
+  		$score = $_POST['score'];
+		$text = $_POST['text'];
+		$order_id = $_POST['order_id'];
+		
+		
    
-   $query = mysqli_query($conn,"INSERT INTO rating SET score='".$rating."', R_remark='".$_POST['text']."', order_id ='".$_POST['order_id']."'");
+   $query = mysqli_query($conn,"INSERT INTO rating(score,R_remark,order_id) VALUES ('$score','$text','$order_id')");
 
    if(mysqli_insert_id($conn)){
+	  
   
-   echo '<script>alert("Thank You For Your Rating"); location.replace(document.referrer);</script>';
-     exit;
+   echo "<script>alert('Thank You For Your Rating');</script>";
+	echo"<meta http-equiv='refresh' content='0; url=homepage.php'/>";
+     
    }else{
     
-   echo '<script>alert("Error on submit, please try again!"); location.replace(document.referrer);</script>';
+  echo "<script>alert('Error on submit, please try again!');</script>";
+   echo"<meta http-equiv='refresh' content='0; url=homepage.php'/>";
    }
-   
+}						 
 
-}
+
 ?>
 <head>
   <link href="css/stylerate.css" rel="stylesheet" type="text/css" media="all" />
@@ -68,20 +73,20 @@ body {
           <h2 >How satisfied were you with our Service?</h2>
        <ul class="agile_info_select">
             	  
-                  <li><input type="radio" name="view" value="excellent" id="excellent" required> 
-            <label for="excellent">excellent</label>
+             <li><input type="radio" name="score" value="5" id="excellent" required> 
+            <label for="excellent">Excellent</label>
               <div class="check w3"></div>
          </li>
-         <li><input type="radio" name="view" value="good" id="good"> 
-            <label for="good"> good</label>
+         <li><input type="radio" name="score" value="4" id="good"> 
+            <label for="good" > Good</label>
               <div class="check w3ls"></div>
          </li>
-         <li><input type="radio" name="view" value="neutral" id="neutral">
-           <label for="neutral">neutral</label>
+         <li><input type="radio" name="score" value="3" id="neutral">
+           <label for="neutral" >Neutral</label>
              <div class="check wthree"></div>
          </li>
-         <li><input type="radio" name="view" value="poor" id="poor"> 
-            <label for="poor">poor</label>
+         <li><input type="radio" name="score" value="2" id="poor"> 
+            <label for="poor" >Poor</label>
               <div class="check w3_agileits"></div>
          </li>
        
@@ -89,9 +94,7 @@ body {
 	        </div>
 	    </form>
 
-		<?php } else { ?>
-			<h2 style="text-align:center;">Order Not Found</h2>
-		<?php } ?>
+		<?php }  ?>
 	</div>
    <?php include('../footer.php');?>
 </body>
