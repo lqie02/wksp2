@@ -113,7 +113,7 @@ body {
 function updateDiscount(){
   var post_value = { discount : $('#discount').val(), post_type: 'discount' };
   $.ajax({
-    url: '/fkfood/customer/addCart.php',
+    url: '/wksp2/customer/addCart.php',
     type: 'post',
     data: post_value,
     dataType: 'json',
