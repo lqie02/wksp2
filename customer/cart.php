@@ -6,6 +6,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+table, th, td {
+  border: 1.5px solid black;
+
+}
+tr:hover {background-color:#ffd9b3;}
 </style>
 <body>
 <div class="container">
@@ -17,16 +22,18 @@ body {
      <thead>
   <h1 class="heading">Your Cart</h1>&nbsp;
    <br>
-<table class="table table-bordered-dark">
-     	<tr>
-       <td style="padding: 10px font-weight: bold;"><h2>No</h2></td>
+   <div class="header">
+</div>
+
+<table style="width:110%">
+    <tr>
+       <td style="padding: 10px;"><h2>No</h2></td>
      	 <td style="padding: 10px;"><h2>Product</h2></td>
      	 <td style="padding: 10px;"><h2>Name</h2></td>
      	 <td style="padding: 10px;"><h2>Price</h2></td>
      	 <td style="padding: 10px;"><h2>Quantity</h2></td>
      	 <td style="padding: 10px;"><h2>Total</h2></td>
-       <td></td>
-     	</tr>
+       <td></td></tr>
      </thead>
       <?php $no = 1; $total = 0; foreach($_SESSION['items'] as $key => $qty) { ?>
       	<tr>
