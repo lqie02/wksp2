@@ -6,6 +6,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+table, th, td {
+  border: 1.5px solid black;
+
+}
+tr:hover {background-color:#ffd9b3;}
 </style>
 <body>
 <div class="container">
@@ -17,16 +22,18 @@ body {
      <thead>
   <h1 class="heading">Your Cart</h1>&nbsp;
    <br>
-       <table class="table table-bordered">
-     	<tr>
-       <td style="padding: 10px;">No</td>
-     	 <td style="padding: 10px;"><h4>Product</h4></td>
-     	 <td style="padding: 10px;"><h4>Name</h4></td>
-     	 <td style="padding: 10px;"><h4>Price</h4></td>
-     	 <td style="padding: 10px;"><h4>Quantity</h4></td>
-     	 <td style="padding: 10px;"><h4>Total</h4></td>
-       <td></td>
-     	</tr>
+   <div class="header">
+</div>
+
+<table style="width:110%">
+    <tr>
+       <td style="padding: 10px;"><h2>No</h2></td>
+     	 <td style="padding: 10px;"><h2>Product</h2></td>
+     	 <td style="padding: 10px;"><h2>Name</h2></td>
+     	 <td style="padding: 10px;"><h2>Price</h2></td>
+     	 <td style="padding: 10px;"><h2>Quantity</h2></td>
+     	 <td style="padding: 10px;"><h2>Total</h2></td>
+       <td></td></tr>
      </thead>
       <?php $no = 1; $total = 0; foreach($_SESSION['items'] as $key => $qty) { ?>
       	<tr>
@@ -49,7 +56,7 @@ body {
          <td style="padding: 10px;"><img src="/wksp2<?php echo $row['image']; ?>" style="height: 150px;"></td>
          <td style="padding: 10px;"><h3><?php echo $row['itemName']; ?></h3></td>
          <td style="padding: 10px;"><h3>RM <?php echo $row['unitPrice']; ?></h3></td>
-         <td><input type="number" name="qty[<?php echo $key;?>]" id="qty-<?php echo $key;?>" value="<?php echo $qty;?>" style="height: 32px;font-size: 16px;width: 100px;"><button type="button" data-toggle="tooltip" title="" class="btn btn-primary" onclick="update(<?php echo $key;?>);" data-original-title="Update" style="margin-top: 0px;"><i class="fa fa-refresh"></i></button></td>
+         <td><input type="number" name="qty[<?php echo $key;?>]" id="qty-<?php echo $key;?>" value="<?php echo $qty;?>" style="height: 32px;font-size: 20px;width: 100px;"><button type="button" data-toggle="tooltip" title="" class="btn btn-primary" onclick="update(<?php echo $key;?>);" data-original-title="Update" style="margin-top: 0px;"><i class="fa fa-refresh"></i></button></td>
          <td style="padding: 10px; font-weight: bold;"><h3>RM <?php echo $row['unitPrice']*$qty; ?></h3></td>
          <td><button type="button" data-toggle="tooltip" title="" class="btn btn-danger" onclick="remove(<?php echo $key;?>);" data-original-title="Remove"><i class="fa fa-times-circle"></i></button></td>
            
