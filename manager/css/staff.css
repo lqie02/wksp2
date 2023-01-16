@@ -155,11 +155,11 @@ nav ul li:hover ul.dropdown {
 
 
 img {
-    width: 100px;
+    width: 70px;
     float: left;
     text-align: center;
-    margin-left: 30px;
-    margin-top: 5px;
+    margin-left: 35px;
+    margin-top: 10px;
 }
 
 .text p {
