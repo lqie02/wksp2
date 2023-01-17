@@ -62,7 +62,7 @@ tr:hover {background-color:#ffd9b3;}
 		<button type="button" data-toggle="tooltip" title="" class="btn btn-primary" onclick="update(<?php echo $key;?>);" data-original-title="Update" style="margin-top: 0px;"><i class="fa fa-refresh"></i></button></td>
         
 		<td style="padding: 10px; font-weight: bold;">
-		<h3 style="height: 32px;font-size: 20px;width: 100px;">RM <?php echo $row['unitPrice']*$qty; ?> &nbsp;<button type="button" style="margin-bottom: :10px;" data-toggle="tooltip" title="" class="btn btn-danger" onclick="remove(<?php echo $key;?>);" data-original-title="Remove"><i class="fa fa-times-circle"></i></button></h3></td>
+		<h3 style="height: 32px;font-size: 20px;width: 120px;">RM <?php echo $row['unitPrice']*$qty; ?> &nbsp;<button type="button" style="margin-bottom: :10px;" data-toggle="tooltip" title="" class="btn btn-danger" onclick="remove(<?php echo $key;?>);" data-original-title="Remove"><i class="fa fa-times-circle"></i></button></h3></td>
            
        <?php  } ?>
        </tr>
