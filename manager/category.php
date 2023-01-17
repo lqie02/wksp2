@@ -16,8 +16,8 @@ if(isset($_GET['dt'])){
        <thead>
 		   <tr style="font-size: 17px">
        	 <td style="width:10px;"><b>NO.</b></td>
-       	 <td ><b>NAME</b></td>
-       	 <td><b>DESCRIPTION</b></td>
+       	 <td ><b><center>NAME</b></td>
+       	 <td><b><center>DESCRIPTION</b></td>
        	 <td><center><b>ACTION</b></center></td>
 			   </tr>
        </thead>

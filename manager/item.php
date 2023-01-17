@@ -102,11 +102,11 @@ if(isset($_GET['delete'])){
       <thead>
 		  <tr style="font-size: 15px">
       	 <th style="width:10px;">NO.</th>
-		  <th>PRODUCT IMAGE</th>
-         <th>PRODUCT NAME</th>
-         <th>PRODUCT PRICE</th>
+		  <th><center>PRODUCT IMAGE</th>
+         <th><center>PRODUCT NAME</th>
+         <th><center>PRODUCT PRICE</th>
        <!--   <th>Product Status</th>-->
-         <th>ACTION</th></tr>
+         <th><center>ACTION</th></tr>
       </thead>
 
       <tbody>
