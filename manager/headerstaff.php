@@ -40,7 +40,7 @@
 		<label class="logo" >FK Restaurant</label>
 		<ul>
 		<li><a  class="active" href="dashboard.php">Home</a></li>
-		></li>
+		</li>
 		<li><a  href="item.php">Manage Item</a></li>
 		<li><a  href="category.php">Manage Category</a></li>
         <li><a href="logout.php">Logout</a></li>
