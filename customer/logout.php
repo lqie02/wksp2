@@ -7,7 +7,7 @@
  unset($_SESSION['address']);
  unset($_SESSION['items']);
  session_destroy();
- header("Location: ../index.php");
+ header("Location: ../customer/dashboard.php");
 exit;
 
 ?>
