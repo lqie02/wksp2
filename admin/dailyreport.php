@@ -152,7 +152,7 @@ else{
 				} ?>
 				<tr>
 					<td colspan="4" align="center">TOTAL</td>
-					<td><center><?php echo $ftotal; ?></center></td>
+					<td><center><?php echo sprintf('%.2f',$ftotal); ?></center></td>
 				</tr>
 				</tbody>
 			</table>
@@ -207,7 +207,7 @@ else{
 				} ?>
 				<tr>
 					<td colspan="4" align="center">TOTAL</td>
-					<td><center><?php echo $ftotal; ?></center></td>
+					<td><center><?php echo sprintf('%.2f',$ftotal); ?></center></td>
 				</tr>
 				</tbody>
 				</table> <?php  } } } ?>
