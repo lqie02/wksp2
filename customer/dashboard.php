@@ -1,4 +1,4 @@
-<?php $title = 'homepage';
+<?php $title = 'Dashboard';
  include('lets.php') ;?>
 
 <!DOCTYPE html>
