@@ -2,15 +2,11 @@
     <?php $title = "Rating"; include('header.php') ;?>
 
 <?php if(isset($_POST['submit'])){
-	
-
     
   		$score = $_POST['score'];
 		$text = $_POST['text'];
 		$order_id = $_POST['order_id'];
 		
-		
-   
    $query = mysqli_query($conn,"INSERT INTO rating(score,R_remark,order_id) VALUES ('$score','$text','$order_id')");
 
    if(mysqli_insert_id($conn)){

@@ -4,8 +4,7 @@
 
   if(isset($_POST['submit'])){
      $customer_query =mysqli_query($conn,"UPDATE customer SET custName = '" .$_POST['custName'] ."', custTel = '" .$_POST['custTel'] . "', address = '".$_POST['address']."' WHERE customer_id = '".$_SESSION['customer_id']."'");
-     
-  
+      
 
      if($_POST['custPassword']){
       $customer_query = mysqli_query($conn,"UPDATE customer SET custPassword = '" .md5($_POST['custPassword']) ."'  WHERE customer_id = '".$_SESSION['customer_id']."'");

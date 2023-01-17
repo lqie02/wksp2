@@ -70,7 +70,7 @@ if(isset($_POST['btn_login']))
             }
             else
             {
-              $msg="Email or Password was wrong.<br/>$rem_attm attempts remaining";
+              $msg="Email or Password or Role was wrong.<br/>$rem_attm attempts remaining";
             }
             $try_time=time();
             mysqli_query($conn,"INSERT INTO loginlogs(IpAddress,TryTime) values('$ip_address','$try_time')");
@@ -109,7 +109,7 @@ if(isset($_POST['btn_login']))
             }
             else
             {
-              $msg="Email or Password was wrong.<br/>$rem_attm attempts remaining";
+              $msg="Email or Password or Role was wrong.<br/>$rem_attm attempts remaining";
             }
             $try_time=time();
             mysqli_query($conn,"INSERT INTO loginlogs(IpAddress,TryTime) values('$ip_address','$try_time')");
@@ -148,7 +148,7 @@ if(isset($_POST['btn_login']))
             }
             else
             {
-              $msg="Email or Password was wrong.<br/>$rem_attm attempts remaining";
+              $msg="Email or Password or Role was wrong.<br/>$rem_attm attempts remaining";
             }
             $try_time=time();
             mysqli_query($conn,"INSERT INTO loginlogs(IpAddress,TryTime) values('$ip_address','$try_time')");
