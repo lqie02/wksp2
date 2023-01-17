@@ -70,7 +70,7 @@ body {
        <ul class="agile_info_select">
             	  
              <li><input type="radio" name="score" value="5" id="excellent" required> 
-            <label for="excellent">Excellent</label>
+            <label for="excellent">Very Good</label>
               <div class="check w3"></div>
          </li>
          <li><input type="radio" name="score" value="4" id="good"> 
@@ -83,6 +83,10 @@ body {
          </li>
          <li><input type="radio" name="score" value="2" id="poor"> 
             <label for="poor" >Poor</label>
+              <div class="check w3_agileits"></div>
+         </li>
+         <li><input type="radio" name="score" value="1" id="poor"> 
+            <label for="poor" >Very Poor</label>
               <div class="check w3_agileits"></div>
          </li>
        
