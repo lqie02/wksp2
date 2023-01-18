@@ -114,7 +114,7 @@ function showSlides() {
 <br><br><hr class="solid"><br><br>
 
 <div class="container">
-  <img src="../img/banner1.jpg" alt="Snow" height="250" width="1000">
+  <img src="../img/banner2.jpg" alt="Snow" height="250" width="1000">
  <!--  <button class="btn">Start Order</button> -->
 </div>
 
