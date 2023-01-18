@@ -5,7 +5,10 @@
 <html lang="en">
 <style>
   p.thicker {
-  font-weight: 900;
+  font-weight: 1000;
+  margin-top: 10px;
+  font-size: 35px;
+
 }
   </style>
 <head>

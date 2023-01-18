@@ -1,4 +1,4 @@
-<?php $title = 'homepage';
+<?php $title = 'Homepage';
  include('header.php') ;?>
 
 <!DOCTYPE html>

@@ -19,7 +19,8 @@ body {
 
 .logo {
   color: var(--color-white);
-  font-size: 30px;
+  font-size: 40px;
+	margin-right: 50px;
 }
 
 .logo span {
@@ -372,4 +373,12 @@ input::-moz-focus-inner {
 .thead-dark{
   background: #000;
   color: #fff;
+}
+
+.menu-bar img{
+	width: 70px;
+    float: left;
+    text-align: center;
+	margin-left: 35px;
+	margin-top: 2px;
 }
