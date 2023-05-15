@@ -6,7 +6,7 @@ if(isset($_SESSION["staff_id"]))
 	$id= $_SESSION["staff_id"];
 	$name= $_SESSION["staffName"];
 	
-	if((time()-$_SESSION['Active_Time'])>20000)
+	if((time()-$_SESSION['Active_Time'])>300)
 	{
 		header('Location:../loginS.php');
 	}
